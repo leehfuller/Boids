@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace Boids.Boids {
-	class Boid {
+namespace Boids.Boids 
+{
+	class Boid 
+	{
 		public static Texture2D boidSprite;
 		private static Random rand = new Random();
 		private const int speed = 5;
@@ -17,42 +19,49 @@ namespace Boids.Boids {
 		
 		private Flock flock;
 
-		public Boid(int x, int y, Flock flock) {
+		public Boid(int x, int y, Flock flock) 
+		{
 			this.position = new Vector2(x, y);
 			this.flock = flock;
 		}
 
-		public void Draw(SpriteBatch sb) {
-			sb.Draw(boidSprite, position:position, rotation:GetRotationRad(), origin:new Vector2(5, 5));
+        public void Draw(SpriteBatch sb)
+        {
+            sb.Draw(boidSprite, position: position, rotation: GetRotationRad(), origin: new Vector2(5, 5));
 			sb.DrawLine(position, position + velocity * 3, Color.Red, thickness: 2);
 		}
 
-		public float GetRotationRad() {
+		public float GetRotationRad() 
+		{
 			return (float)Math.Atan2(velocity.Y, velocity.X) + MathHelper.PiOver2;
 		}
 
-		public void Accelerate(Vector2 accel) {
+		public void Accelerate(Vector2 accel) 
+		{
 			acceleration += accel/turnSpeed;
 		}
 
-		public void Run() {
+		public void Run() 
+		{
 			velocity += acceleration;
 			acceleration = Vector2.Zero;
 
-			if (Math.Abs(velocity.Length()) > speed) {
+			if (Math.Abs(velocity.Length()) > speed) 
+			{
 				velocity.Normalize();
 				velocity *= speed;
 			}
 
 			position += velocity;
-			cellPosition = new Vector2(position.X / MainGame.cellWidth, position.Y / MainGame.cellHeight);
+            //cellPosition = new Vector2(position.X / MainGame.cellWidth, position.Y / MainGame.cellHeight);
+            cellPosition = new Vector2(position.X / 50, position.Y / 50);
 
-			Borders();
+            Borders();
 		}
 
-		private void Borders() {
-			if (position.X < 0 || position.X > MainGame.screenWidth ||
-				position.Y < 0 || position.Y > MainGame.screenHeight)
+		private void Borders() 
+		{
+			if (position.X < 0 || position.X > MainGame.screenWidth || position.Y < 0 || position.Y > MainGame.screenHeight)
 				position = new Vector2(MainGame.screenWidth / 2, MainGame.screenHeight / 2);
 		}
 	}

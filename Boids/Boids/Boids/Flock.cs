@@ -4,37 +4,46 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Boids.Boids {
-	class Flock {
+namespace Boids.Boids 
+{
+	class Flock 
+	{
 		private List<Boid> boids;
 
-		private int numBoids = 100;
+		private int numBoids = 500;
 		private static Random rand = new Random();
 
-		public Flock() {
+		public Flock() 
+		{
 			boids = new List<Boid>();
 
-			for (int i = 0; i < numBoids; i++) {
+			for (int i = 0; i < numBoids; i++) 
+			{
 				Boid b = new Boid(rand.Next(0, MainGame.screenWidth), rand.Next(0, MainGame.screenHeight), this);
 				Add(b);
 			}
 		}
 
-		public void Add(Boid boid) {
+		public void Add(Boid boid) 
+		{
 			boids.Add(boid);
 		}
 
-		public void Remove(Boid boid) {
+		public void Remove(Boid boid) 
+		{
 			boids.Remove(boid);
 		}
 
-		public void Draw(SpriteBatch sb) {
-			foreach (Boid b in boids) {
+		public void Draw(SpriteBatch sb) 
+		{
+			foreach (Boid b in boids) 
+			{
 				b.Draw(sb);
 			}
 		}
 
-		private List<Vector2> GetBorderPoints(Boid boid) {
+		private List<Vector2> GetBorderPoints(Boid boid) 
+		{
 			return new List<Vector2>() {
 			new Vector2(boid.position.X, 0),
 			new Vector2(boid.position.X, MainGame.screenHeight),
@@ -43,7 +52,8 @@ namespace Boids.Boids {
 			};
 		}
 		
-		public void Update() {
+		public void Update() 
+		{
 			Task.Run(() => {
 				foreach (Boid b in boids) {
 					b.Accelerate(FlockBehaviour.Avoidance(b, boids) * 1.5f);

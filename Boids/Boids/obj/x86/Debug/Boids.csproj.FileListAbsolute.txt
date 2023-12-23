@@ -25,3 +25,28 @@ C:\Users\Aaron\Documents\Visual Studio 2017\Projects\Boids\Boids\obj\x86\Debug\B
 C:\Users\Aaron\Documents\Visual Studio 2017\Projects\Boids\Boids\obj\x86\Debug\Boids.pdb
 C:\Users\Aaron\Documents\Visual Studio 2017\Projects\Boids\Boids\bin\Windows\x86\Debug\Content\Boid.xnb
 C:\Users\Aaron\Documents\Visual Studio 2017\Projects\Boids\Boids\bin\Windows\x86\Debug\Boids.exe.config
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\Content\Boid.xnb
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\Boids.exe.config
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\Boids.exe
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\Boids.pdb
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\Boids\Boids\Boids\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\Boids\Boids\Boids\obj\x86\Debug\Boids.csproj.AssemblyReference.cache
+D:\Boids\Boids\Boids\obj\x86\Debug\Boids.csproj.CoreCompileInputs.cache
+D:\Boids\Boids\Boids\obj\x86\Debug\Boids.csproj.CopyComplete
+D:\Boids\Boids\Boids\obj\x86\Debug\Boids.exe
+D:\Boids\Boids\Boids\obj\x86\Debug\Boids.pdb

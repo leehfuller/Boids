@@ -3,21 +3,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Boids.Boids {
-	static class FlockBehaviour {
+namespace Boids.Boids 
+{
+	static class FlockBehaviour 
+	{
 
-		public static Vector2 Avoidance(Boid boid, List<Boid> boids) {
+		public static Vector2 Avoidance(Boid boid, List<Boid> boids) 
+		{
 			var radius = 25;
 			var avoid = new Vector2();
 			var count = 0;
 
-			foreach (Boid other in boids) {
+			foreach (Boid other in boids) 
+			{
 				if (Math.Abs((boid.cellPosition - other.cellPosition).Length()) > 1)
 					continue;
 
 				var distance = Vector2.Distance(boid.position, other.position);
 					
-				if (distance < radius && distance > 0) {
+				if (distance < radius && distance > 0) 
+				{
 					avoid += (boid.position - other.position) / (float)Math.Pow(distance, 2);
 					count++;
 				}
@@ -34,12 +39,14 @@ namespace Boids.Boids {
 			return avoid;
 		}
 
-		public static Vector2 AvoidPoints(Boid boid, List<Vector2> points) {
+		public static Vector2 AvoidPoints(Boid boid, List<Vector2> points) 
+		{
 			var radius = 25;
 			var avoid = new Vector2();
 			var count = 0;
 
-			foreach (Vector2 point in points) {
+			foreach (Vector2 point in points) 
+			{
 				var distance = Vector2.Distance(boid.position, point);
 
 				if (distance < radius && distance > 0) {
@@ -59,18 +66,21 @@ namespace Boids.Boids {
 			return avoid;
 		}
 
-		public static Vector2 Alignment(Boid boid, List<Boid> boids) {
+		public static Vector2 Alignment(Boid boid, List<Boid> boids) 
+		{
 			var radius = 100;
 			var align = new Vector2();
 			var count = 0;
 
-			foreach (Boid other in boids) {
+			foreach (Boid other in boids) 
+			{
 				if (Math.Abs((boid.cellPosition - other.cellPosition).Length()) > 1)
 					continue;
 
 				var distance = Vector2.Distance(boid.position, other.position);
 
-				if (distance < radius && distance > 0) {
+				if (distance < radius && distance > 0) 
+				{
 					align += other.velocity;
 					count++;
 				}
@@ -84,18 +94,21 @@ namespace Boids.Boids {
 			return dir;
 		}
 
-		public static Vector2 Cohesion(Boid boid, List<Boid> boids) {
+		public static Vector2 Cohesion(Boid boid, List<Boid> boids) 
+		{
 			var radius = 100;
 			var cohere = new Vector2();
 			var count = 0;
 
-			foreach (Boid other in boids) {
+			foreach (Boid other in boids) 
+			{
 				if (Math.Abs((boid.cellPosition - other.cellPosition).Length()) > 1)
 					continue;
 
 				var distance = Vector2.Distance(boid.position, other.position);
 
-				if (distance < radius && distance > 0) {
+				if (distance < radius && distance > 0) 
+				{
 					cohere += other.position;
 					count++;
 				}
